@@ -1,38 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geolocation Example</title>
-</head>
-
-<body>
-    <button id="getLocation">获取位置</button>
-    <div id="location">测试位置</div>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>网格标绘演示项目</title>
+    <script type="module" crossorigin src="/assets/index-DqOcZ-MG.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-OC29dMHn.css">
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
 </html>
+
+
 <script>
-    document.getElementById('getLocation').addEventListener('click', function () {
-        if ("geolocation" in navigator) {
-            alert(333);
-            navigator.geolocation.getCurrentPosition(success, error);
-        } else {
-            alert(111);
-            document.getElementById('location').innerHTML = "Geolocation is not supported by this browser.";
-        }
-    });
-
-    function success(position) {
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
-        alert(`Latitude: ${latitude}, Longitude: ${longitude}`);
-        document.getElementById('location').innerHTML = `Latitude: ${latitude}, Longitude: ${longitude}`;
-    }
-
-    function error() {
-        alert(222);
-        document.getElementById('location').innerHTML = "Unable to retrieve your location.";
-    }
+  
 </script>
